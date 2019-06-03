@@ -1,0 +1,43 @@
+﻿@using Petz.Models
+@model List<Korisnik>
+@{
+    ViewBag.Title = "PopisKorisnika";
+}
+
+<h2>Popis Korisnika:</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Ime
+        </th>
+        <th>
+            Prezime
+        </th>
+        <th>
+            E-mail
+        </th>
+    </tr>
+
+    <tr>
+    @foreach(Korisnik korisnik in Model)
+    {
+        <td>
+            @korisnik.Id
+        </td>
+        <td>
+            @korisnik.Ime
+        </td>
+        <td>
+            @korisnik.Prezime
+        </td>
+        <td>
+            @korisnik.Email
+        </td>
+    }
+    </tr>
+</table>
+

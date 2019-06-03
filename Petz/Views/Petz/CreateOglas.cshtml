@@ -1,0 +1,27 @@
+﻿@using Petz.Models;
+@model Oglas
+@{
+    ViewBag.Title = "CreateOglas";
+}
+
+<h2>Izrada novog oglasa: </h2>
+
+@using (@Html.BeginForm("CreateOglas", "Petz", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Naslov, "Naslov oglasa: ")
+    <br />
+    @Html.TextBoxFor(m => m.Naslov);
+    <br />
+    @Html.LabelFor(m => m.Cijena, "Cijena: ")
+    <br />
+    @Html.TextBoxFor(m => m.Cijena);
+    <br />
+    @Html.LabelFor(m => m.Opis, "Opis oglasa: ")
+    <br />
+    @Html.TextBoxFor(m => m.Opis);
+    <br />
+
+    <button type="submit">Registriraj se</button>
+}
+
+

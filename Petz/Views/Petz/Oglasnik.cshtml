@@ -1,0 +1,26 @@
+﻿@using Petz.Models;
+@model List<Oglas>
+@{
+    ViewBag.Title = "Oglasnik";
+}
+
+<h2>Oglasnik: </h2>
+<br />
+<input type="button" value="Dodaj Oglas" onclick="location.href='@Url.Action("CreateOglas", "Petz")'" />
+<br />
+
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/PetzStyleSheet.css">
+</head>
+
+@foreach(Oglas oglas in Model)
+{
+    <div class="div-oglas">
+        @oglas.Naslov
+        <br />
+        @oglas.Opis
+        <br />
+        Cijena: @oglas.Cijena
+    </div>
+}
+

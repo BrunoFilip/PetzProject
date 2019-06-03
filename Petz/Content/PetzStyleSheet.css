@@ -1,0 +1,9 @@
+﻿.div-oglas 
+{
+    margin-right: 5%;
+    margin-bottom: 5%;
+    display: inline-block;
+    width: 25%;
+    height: 150px;
+    border: 2px solid black;
+}

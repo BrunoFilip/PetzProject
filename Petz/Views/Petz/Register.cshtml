@@ -1,0 +1,26 @@
+﻿@using Petz.Models;
+@model Korisnik
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Registracija: </h2>
+
+@using (@Html.BeginForm("Register", "Petz", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.Ime, "Ime: ")
+    <br />
+    @Html.TextBoxFor(m => m.Ime);
+    <br />
+    @Html.LabelFor(m => m.Prezime, "Prezime: ")
+    <br />
+    @Html.TextBoxFor(m => m.Prezime);
+    <br />
+    @Html.LabelFor(m => m.Email, "E-mail: ")
+    <br />
+    @Html.TextBoxFor(m => m.Email);
+    <br />
+
+    <button type="submit">Registriraj se</button>
+}
